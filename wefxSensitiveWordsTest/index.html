@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>微信分享关键字测试</title>
+    <script src="https://test.qtz360.com/h5/plugins/jquery.min.js"></script>
+    <script src="https://test.qtz360.com/h5/plugins/commonRequestPrefix.js"></script>
+    <script src="https://test.qtz360.com/h5/plugins/wechat.js"></script>
+    <script src="https://test.qtz360.com/h5/plugins/wxfxinit.js"></script>
+</head>
+<body>
+<h3>微信分享，关键字敏感导致小图标不显示。</h3>
+<h4>小图标系统默认</h4>
+<label for="title">分享标题：<input type="text" id="title" placeholder="请输入分享的标题" oninput="valueChange()"></label>
+<br/>
+<br/>
+<label for="text">分享描述：<textarea id="text" cols="30" rows="10" placeholder="请输入分享的描述" style="vertical-align: text-top"
+                                 oninput="valueChange()"></textarea></label>
+<br/>
+<br/>
+<h4 style="color:red;">点击提交后再分享</h4>
+<div id="rmg" style="color:#2dafff;">未提交</div>
+<br/>
+<button onclick="clickWxfx()">提交</button>
+<script src="./js/wxfxTest.js"></script>
+</body>
+</html>
