@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+    <style>
+        .parent{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .submit{
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="parent">
+    <button class="submit">点击</button>
+</div>
+
+
+<script>
+    // var a = 123;
+    // var obj = {
+    //     a: 1,
+    //     fn: function () {
+    //         //do somethings
+    //         return function () {
+    //             console.log(this.a);
+    //         }
+    //     }
+    // };
+    // obj.fn()();
+    //ES5
+    // var a = 123;
+    // var obj = {
+    //     a: 1,
+    //     fn: function () {
+    //         let self  = this;
+    //         return function () {
+    //             console.log(self.a);
+    //         }
+    //     }
+    // }
+    // obj.fn()();
+    //ES6
+    var a= 123;
+    var obj = {
+        a: 1,
+        fn(){
+            console.log(this);
+            return ()=>{
+                console.log(this.a);
+            }
+        },
+    };
+    obj.fn()();
+</script>
+<script src="wefxSensitiveWordsTest/plgins/jquery.min.js"></script>
+<script>
+    $('.parent').on('click', function (ev) {
+        let e  = ev || window.event;
+        console.log('parent click');
+    });
+    $('.parent').on('touchstart', function (ev) {
+        let e = ev || window.event;
+        console.log('parent touch');
+    });
+    $('.submit').on('click', function (ev) {
+        let e = ev || window.event;
+        console.log('submit 1');
+        // e.stopImmediatePropagation();
+        e.stopPropagation();
+    });
+    $('.submit').on('click', function (ev) {
+        let e = ev || window.event;
+        console.log('submit 2');
+    })
+
+</script>
+</body>
+</html>

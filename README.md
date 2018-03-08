@@ -4,5 +4,5 @@
 
     + buttonLoadding  按钮的点击loadding效果
     + wxfxSensitiveWordsTest  微信分享敏感词测试
-
+    + asyncAjax  Promise异步处理ajax数据
 
